@@ -1,3 +1,4 @@
+* [おすすめ資料まとめ](Resource/Page/ReferenceMaterials.md)
 * [方針](Resource/Page/Policy.md)
 	* [開発環境](Resource/Page/DevEnv.md)
 * [開発環境構築](Resource/Page/SetupDevEnv.md)
