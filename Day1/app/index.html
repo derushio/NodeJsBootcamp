@@ -26,6 +26,12 @@
 	<h1>day1App</h1>
 	<div ng-controller="day1Controller">
 		<p>{{users.length}} users.</p>
+		<ui>
+			<li ng-repeat="user in users">
+				<!-- ng-repeat usersの中身をfor文のようにuserに入れて以下の処理を実行 -->
+				{{user.name}}さんのスコアは{{user.score}}点
+			</li>
+		</ui>
 	</div>
 
 	<!-- build:js(.) scripts/vendor.js -->
