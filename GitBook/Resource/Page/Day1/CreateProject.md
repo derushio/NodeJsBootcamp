@@ -33,3 +33,4 @@
 0. `grunt serve` と入力し `enter`
 0. 以下のような画面がブラウザ上で表示されたらプロジェクト作成成功
 	![yoeman_created](../../Image/yoeman_created.png)
+	Bootstrapという機能が有効になっていないので若干寂しい画面になります
