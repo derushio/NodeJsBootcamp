@@ -42,7 +42,8 @@
 0. 以下の画面で動作が止まる
 	![yo_angular_freeze](../../Image/yo_angular_freeze.png)
 	`enter`
-0. `grunt serve` と入力し `enter`
+0. `grunt serve` と入力し `enter` でサーバーを開始
 0. 以下のような画面がブラウザ上で表示されたらプロジェクト作成成功
 	![yoeman_created](../../Image/yoeman_created.png)
 	Bootstrapという機能が有効になっていないので若干寂しい画面になります
+0. Terminal.appに戻り `control` + `c` でサーバーを終了
