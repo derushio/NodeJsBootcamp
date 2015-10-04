@@ -7,7 +7,7 @@
 0. Terminal.appを開く
 0. `curl -L git.io/nodebrew | perl - setup` を入力して `enter`  
 	終了すると
-	```bash
+	``` bash
 	Add path:
 
 	export PATH=$HOME/.nodebrew/current/bin:$PATH

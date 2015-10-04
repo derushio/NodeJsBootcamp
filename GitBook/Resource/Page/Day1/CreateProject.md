@@ -15,7 +15,7 @@
 0. `? Would you like to include Bootstrap? (Y/n)` と表示される
 	* `n` と入力して `enter`
 0. 以下が表示される
-	```bash
+	``` bash
 	? Which modules would you like to include? (Press <space> to select)
 	❯◉ angular-animate.js
 	 ◯ angular-aria.js
@@ -27,7 +27,7 @@
 	 ◉ angular-touch.js
 	```
 	十字キーで `angular-aria.js` にカーソルを合わせて `space`  
-	```bash
+	``` bash
 	? Which modules would you like to include? (Press <space> to select)
 	 ◉ angular-animate.js
 	❯◉ angular-aria.js
