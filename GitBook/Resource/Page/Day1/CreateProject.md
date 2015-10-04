@@ -26,7 +26,19 @@
 	 ◉ angular-sanitize.js
 	 ◉ angular-touch.js
 	```
-	そのまま `enter`
+	十字キーで `angular-aria.js` にカーソルを合わせて `space`  
+	```bash
+	? Which modules would you like to include? (Press <space> to select)
+	 ◉ angular-animate.js
+	❯◉ angular-aria.js
+	 ◉ angular-cookies.js
+	 ◉ angular-resource.js
+	 ◯ angular-messages.js
+	 ◉ angular-route.js
+	 ◉ angular-sanitize.js
+	 ◉ angular-touch.js
+	```
+	上のような表示に変わったことを確認して `enter`
 0. 以下の画面で動作が止まる
 	![yo_angular_freeze](../../Image/yo_angular_freeze.png)
 	`enter`
