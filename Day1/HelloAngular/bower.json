@@ -1,0 +1,23 @@
+{
+  "name": "HelloAngular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/narumi18wa/NodeJsBootcamp",
+  "authors": [
+    "Derushio <narumi18wa@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.11.2",
+    "angular": "~1.4.7"
+  }
+}
