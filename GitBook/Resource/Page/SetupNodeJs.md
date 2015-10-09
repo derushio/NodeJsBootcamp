@@ -35,13 +35,3 @@
 	`node -v` を入力して `enter` 後に
 	![node_v](../Image/node_v.png)
 	この画面のようにバージョンが表示されていれば成功
-
-## npmの設定
-0. `npm update` を入力して `enter`
-0. `npm install -g yo bower grunt-cli` を入力して `enter`  
-	しばらく時間がかかります
-0. `npm install -g generator-angular` を入力して `enter`
-0. `yo` を入力して `enter`  
-	![yo_exec](../Image/yo_exec.png)
-	上のような画面が表示されていれば成功  
-	`control` + `c` でこの画面を抜ける
