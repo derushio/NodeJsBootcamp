@@ -18,7 +18,7 @@ app.controller('IndexController', ['$scope', '$timeout', '$location', '$anchorSc
 
 		// main.jsで定義したsocket.ioのsendMessageイベントを取得
 		connect.on("sendMessage", function(data) {
-			// $timeout画面を更新する際はこの方法が好ましい
+			// $timeout 画面を更新する際はこの方法が好ましい
 			$timeout(function() {
 				$scope.users.push({
 					name: data.value.name,
@@ -46,8 +46,11 @@ app.controller('IndexController', ['$scope', '$timeout', '$location', '$anchorSc
 				// 自分の入力データを送信
 				value: $scope.me
 			});
-			// メッセージは送信されたので空白へ戻す
-			$scope.me.message = "";
+
+			$timout( function() {
+				// メッセージは送信されたので空白へ戻す
+				$scope.me.message = "";
+			});
 		};
 	}
 ]);

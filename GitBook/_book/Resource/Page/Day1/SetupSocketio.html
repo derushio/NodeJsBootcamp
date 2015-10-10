@@ -38,7 +38,7 @@
     <body>
         
         
-    <div class="book" data-level="4.3" data-basepath="../../.." data-revision="Sat Oct 10 2015 17:00:13 GMT+0900 (JST)">
+    <div class="book" data-level="4.3" data-basepath="../../.." data-revision="Sat Oct 10 2015 17:29:04 GMT+0900 (JST)">
     
 
 <div class="book-summary">
@@ -380,7 +380,7 @@
 
  <span class="hljs-comment">// main.js&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x305F;socket.io&#x306E;sendMessage&#x30A4;&#x30D9;&#x30F3;&#x30C8;&#x3092;&#x53D6;&#x5F97;</span>
  connect.on(<span class="hljs-string">&quot;sendMessage&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
-     <span class="hljs-comment">// $timeout&#x753B;&#x9762;&#x3092;&#x66F4;&#x65B0;&#x3059;&#x308B;&#x969B;&#x306F;&#x3053;&#x306E;&#x65B9;&#x6CD5;&#x304C;&#x597D;&#x307E;&#x3057;&#x3044;</span>
+     <span class="hljs-comment">// $timeout &#x753B;&#x9762;&#x3092;&#x66F4;&#x65B0;&#x3059;&#x308B;&#x969B;&#x306F;&#x3053;&#x306E;&#x65B9;&#x6CD5;&#x304C;&#x597D;&#x307E;&#x3057;&#x3044;</span>
      $timeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
          $scope.users.push({
              name: data.value.name,
@@ -408,8 +408,11 @@
          <span class="hljs-comment">// &#x81EA;&#x5206;&#x306E;&#x5165;&#x529B;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x9001;&#x4FE1;</span>
          value: $scope.me
      });
-     <span class="hljs-comment">// &#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x306F;&#x9001;&#x4FE1;&#x3055;&#x308C;&#x305F;&#x306E;&#x3067;&#x7A7A;&#x767D;&#x3078;&#x623B;&#x3059;</span>
-     $scope.me.message = <span class="hljs-string">&quot;&quot;</span>;
+
+     $timout( <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+         <span class="hljs-comment">// &#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x306F;&#x9001;&#x4FE1;&#x3055;&#x308C;&#x305F;&#x306E;&#x3067;&#x7A7A;&#x767D;&#x3078;&#x623B;&#x3059;</span>
+         $scope.me.message = <span class="hljs-string">&quot;&quot;</span>;
+     });
  };
 </code></pre>
 </li>
