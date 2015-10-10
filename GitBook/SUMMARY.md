@@ -7,4 +7,5 @@
 * [Day1 動かしてみよう](Resource/Page/Day1/Index.md)
 	* [プロジェクト作成](Resource/Page/Day1/CreateProject.md)
 	* [マテリアルデザインの設定](Resource/Page/Day1/SetupMaterial.md)
-	* [Socket.ioの設定](Resource/Page/Day1//SetupSocketio.md)
+	* [Socket.ioの設定](Resource/Page/Day1/SetupSocketio.md)
+	* [完成品コード](Resource/Page/Day1/SampleSource.md)
