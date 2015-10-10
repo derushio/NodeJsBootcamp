@@ -9,7 +9,8 @@ var express = require('express'),
 	http = require('http'),
 	app = express(),
 	server = http.createServer(app),
-	io = require('socket.io').listen(server);
+	io = require('socket.io').listen(server),
+	favicon = require('serve-favicon');
 
 // 3000ポートを監視
 server.listen(3000);
@@ -18,6 +19,9 @@ server.listen(3000);
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/index.html');
 });
+
+// faviconを設定
+app.use(favicon(__dirname + '/images/favicon.ico'));
 
 // `__dirname` を静的ディレクトリとして `/` に配置する `__dirname` はこのmain.jsのディレクトリ
 app.use('/', express.static(__dirname));
