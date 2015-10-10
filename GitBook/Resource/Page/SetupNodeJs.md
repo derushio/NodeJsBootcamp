@@ -1,8 +1,20 @@
 # Node.js
 
-**原則として `sudo` は禁止（わからない人は無視してください）**
-
 ## nodebrew
+### 0. すでにインストールされている場合は削除
+##### もしくは、このページを無視する  
+`node` を実行して何か反応がある場合は下のコマンドを一行づつ実行  
+
+`curl -o uninstall-node.sh https://gist.githubusercontent.com/nicerobot/2697848/raw/uninstall-node.sh`  
+`chmod u+x uninstall-node.sh`  
+`./uninstall-node.sh`  
+`rm uninstall-node.sh`  
+`sudo rm -rf /usr/local/include/node`  
+`sudo rm -rf /usr/local/lib/dtrace`  
+`rm -rf ~/.node-gyp`  
+`rm -rf ~/.npm`  
+`rm -rf ~/.sourcemint`
+
 ### 1. インストール
 0. Terminal.appを開く
 0. `curl -L git.io/nodebrew | perl - setup` を入力して `enter`  

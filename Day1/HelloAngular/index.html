@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>HelloAngular</title>
-		<meta charset="UTF-8">
-		<link href="./bower_components/angular-material/angular-material.min.css" rel="stylesheet">
 
+		<meta charset="UTF-8">
+		<title>AngularChat</title>
+
+		<!-- css -->
+		<link href="./bower_components/angular-material/angular-material.min.css" rel="stylesheet">
+		<!-- css -->
+
+		<!-- server js -->
 		<script src="/socket.io/socket.io.js"></script>
+		<!-- server js -->
 	</head>
-	<body ng-app="HelloAngularApp" ng-controller="IndexController" layout="column">
+
+	<!-- layout="column"は縦並び layout="row"は横並びを表す -->
+	<!-- ng-app このセクションで用いるAppModuleを指定する -->
+	<!-- ng-controller このセクションで用いるControllerを指定する -->
+	<body layout="column" ng-app="AngularChatApp" ng-controller="IndexController">
+		<!-- flex="90" layoutの中身で90%の大きさにする -->
 		<md-content flex="90">
+			<!-- ng-repeat="a in b" このセクションをbの要素数だけ繰り返す。その間はaに対応する要素が代入される -->
 			<md-card ng-repeat="user in users">
 				<md-card-content>
+					<!-- angular.jsは{{}}でcontroller内の$scope要素を呼び出すことができる -->
+					<!-- その要素は常にViewとModelが同期している -->
 					<h2>{{user.name}}</h2>
 					<p>{{user.message}}</p>
 				</md-card-content>
 			</md-card>
+			<!-- $locationが認識するためのid用タグ -->
 			<a id="chatBottom"></a>
 		</md-content>
 
-		<md-content layout="row" flex="10">
+		<md-content flex="10" layout="row">
 			<md-input-container flex="20">
 				<label>Name</label>
+				<!-- 入力された要素はme.nameと同期する -->
 				<input ng-model="me.name">
 			</md-input-container>
+			<!-- flexは何も入力しないと 残りの幅で等幅になる -->
 			<md-input-container flex>
 				<label>Message</label>
-				<input ng-model="me.message" ng-keydown="onKeyDown($event);">
+				<!-- enterキーを押した時に送信するためにng-keydownを
+				IndexController内のonKeyDown($event);で監視している -->
+				<!-- 入力された要素はme.nameと同期する -->
+				<input ng-keydown="onKeyDown($event);" ng-model="me.message">
 			</md-input-container>
 			<md-button class="md-raised" ng-click="sendMessage();">Send</md-button>
 		</md-content>
 
+		<!-- component js -->
 		<script src="./bower_components/angular/angular.js"></script>
 		<script src="./bower_components/angular-animate/angular-animate.js"></script>
 		<script src="./bower_components/angular-aria/angular-aria.js"></script>
 		<script src="./bower_components/angular-material/angular-material.js"></script>
+		<!-- component js -->
 
+		<!-- user js -->
 		<script src="./scripts/controllers/index.js"></script>
+		<!-- user js -->
+
 	</body>
 </html>
