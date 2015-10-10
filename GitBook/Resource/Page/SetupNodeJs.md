@@ -2,7 +2,7 @@
 
 ## nodebrew
 ### 0. すでにインストールされている場合は削除
-##### もしくは、このページを無視する  
+##### もしくは、このページの `3.` から始める
 `node` を実行して何か反応がある場合は下のコマンドを一行づつ実行  
 
 `curl -o uninstall-node.sh https://gist.githubusercontent.com/nicerobot/2697848/raw/uninstall-node.sh`  
@@ -47,3 +47,8 @@
 	`node -v` を入力して `enter` 後に
 	![node_v](../Image/node_v.png)
 	この画面のようにバージョンが表示されていれば成功
+
+### 3. bowerをインストール
+0. `npm install -g bower` を入力して `enter`
+0. `bower` を入力して `enter`
+	* 何か表示されれば成功

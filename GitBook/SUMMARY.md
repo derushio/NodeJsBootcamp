@@ -6,4 +6,4 @@
 	* [Atom](Resource/Page/SetupAtom.md)
 * [Day1 動かしてみよう](Resource/Page/Day1/Index.md)
 	* [プロジェクト作成](Resource/Page/Day1/CreateProject.md)
-	* [プロジェクトの設定](Resource/Page/Day1/SetupProject.md)
+	* [](Resource/Page/Day1/)

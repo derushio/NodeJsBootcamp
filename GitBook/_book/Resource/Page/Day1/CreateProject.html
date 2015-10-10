@@ -29,7 +29,7 @@
         
     
     
-    <link rel="next" href="../../../Resource/Page/Day1/SetupProject.html" />
+    <link rel="next" href="../../../Resource/Page/Day1.html" />
     
     
     <link rel="prev" href="../../../Resource/Page/Day1/Index.html" />
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="4.1" data-basepath="../../.." data-revision="Sat Oct 10 2015 12:42:49 GMT+0900 (JST)">
+    <div class="book" data-level="4.1" data-basepath="../../.." data-revision="Sat Oct 10 2015 13:47:18 GMT+0900 (JST)">
     
 
 <div class="book-summary">
@@ -204,16 +204,16 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="Resource/Page/Day1/SetupProject.html">
+        <li class="chapter " data-level="4.2" data-path="Resource/Page/Day1.html">
             
                 
-                    <a href="../../../Resource/Page/Day1/SetupProject.html">
+                    <a href="../../../Resource/Page/Day1.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>4.2.</b>
                         
-                        プロジェクトの設定
+                        
                     </a>
             
             
@@ -331,6 +331,8 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%BD%9C%E6%88%90">&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x4F5C;&#x6210;</h1>
+<h2 id="%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%80">&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x5FC5;&#x8981;&#x306A;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x8AAD;&#x307F;&#x8FBC;&#x3080;</h2>
+<h3 id="npm%E3%81%A8bower%E3%81%AE%E8%A8%AD%E5%AE%9A">npm&#x3068;bower&#x306E;&#x8A2D;&#x5B9A;</h3>
 <ol>
 <li>&#x9069;&#x5F53;&#x306A;&#x5834;&#x6240;&#x306B;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x4F5C;&#x6210;</li>
 <li>Terminal.app&#x3092;&#x958B;&#x304F;</li>
@@ -340,13 +342,117 @@
 <li>&#x540D;&#x524D;&#x3092;&#x767B;&#x9332;&#x306E;&#x5834;&#x6240;&#x304B;&#x3089;&#x9032;&#x307E;&#x306A;&#x3044;&#x6642;&#x306F;&#x3001;&#x5C0F;&#x6587;&#x5B57;&#x306B;&#x3057;&#x305F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x540D;&#x3092;&#x6253;&#x3064;&#x3068;&#x826F;&#x3044;</li>
 </ul>
 </li>
-<li><code>npm install socket.io</code> &#x3092;&#x5B9F;&#x884C;</li>
-<li><code>npm install express</code> &#x3092;&#x5B9F;&#x884C;</li>
+<li><code>npm install --save socket.io</code> &#x3092;&#x5B9F;&#x884C;</li>
+<li><code>npm install --save express</code> &#x3092;&#x5B9F;&#x884C;</li>
+<li><code>npm install --save serve-favicon</code> &#x3092;&#x5B9F;&#x884C;</li>
 <li><code>bower init</code> &#x3092;&#x5B9F;&#x884C;<ul>
 <li>&#x6307;&#x793A;&#x306B;&#x5F93;&#x3046;</li>
 </ul>
 </li>
-<li></li>
+<li><code>bower install --save angular</code> &#x3092;&#x5B9F;&#x884C;</li>
+<li><code>bower install --save angular-material</code> &#x3092;&#x5B9F;&#x884C;</li>
+</ol>
+<h3 id="main-js%E3%81%AE%E4%BD%9C%E6%88%90">main.js&#x306E;&#x4F5C;&#x6210;</h3>
+<ol>
+<li>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x76F4;&#x4E0B;&#x306B;main.js&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;</li>
+<li><p>&#x4EE5;&#x4E0B;&#x306E;&#x5185;&#x5BB9;&#x3092;&#x5165;&#x529B;&#x3059;&#x308B;</p>
+<pre><code class="lang-JavaScript"> <span class="hljs-comment">/**
+  * &#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x8A2D;&#x5B9A;&#x7528;&#x30D5;&#x30A1;&#x30A4;&#x30EB;
+  *
+  *
+  **/</span>
+
+ <span class="hljs-comment">// server&#x306B;&#x5FC5;&#x8981;&#x306A;&#x6A5F;&#x80FD;&#x3092;&#x5B9A;&#x7FA9;</span>
+ <span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>),
+     http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>),
+     app = express(),
+     server = http.createServer(app),
+     io = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;socket.io&apos;</span>).listen(server),
+     favicon = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;serve-favicon&apos;</span>);
+
+ <span class="hljs-comment">// 3000&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x76E3;&#x8996;</span>
+ server.listen(<span class="hljs-number">3000</span>);
+
+ <span class="hljs-comment">// `/` &#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3057;&#x3066;&#x304D;&#x305F;&#x6642;&#x306E;&#x51E6;&#x7406; `index.html` &#x3092;&#x8FD4;&#x3059;</span>
+ app.get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+     res.sendFile(__dirname + <span class="hljs-string">&apos;/index.html&apos;</span>);
+ });
+
+ <span class="hljs-comment">// `__dirname` &#x3092;&#x9759;&#x7684;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3068;&#x3057;&#x3066; `/` &#x306B;&#x914D;&#x7F6E;&#x3059;&#x308B; `__dirname` &#x306F;&#x3053;&#x306E;main.js&#x306E;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;</span>
+ app.use(<span class="hljs-string">&apos;/&apos;</span>, express.static(__dirname));
+</code></pre>
+<p> &#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x6A5F;&#x80FD;&#x3092;&#x8AAC;&#x660E;&#x3059;&#x308B;&#x3068;  </p>
+<ul>
+<li>express<ul>
+<li>server&#x5185;&#x306E;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x306B;&#x5BFE;&#x3059;&#x308B;&#x30EC;&#x30B9;&#x30DD;&#x30F3;&#x30B9;&#x306E;&#x5185;&#x5BB9;&#x3084;&#x3001;server&#x306B;&#x304A;&#x3044;&#x3066;&#x304A;&#x304F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x5185;&#x5BB9;&#x306A;&#x3069;&#x3092;&#x8A2D;&#x5B9A;&#x3067;&#x304D;&#x308B;&#x4FBF;&#x5229;&#x6A5F;&#x80FD;</li>
+</ul>
+</li>
+<li>http<ul>
+<li>http&#x901A;&#x4FE1;&#x3092;&#x4F7F;&#x7528;</li>
+</ul>
+</li>
+<li>app<ul>
+<li>&#x3053;&#x306E;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x306E;&#x8A2D;&#x5B9A;</li>
+</ul>
+</li>
+<li>server<ul>
+<li>&#x30DD;&#x30FC;&#x30C8;&#x3084;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x5F85;&#x3061;&#x69CB;&#x3048;&#x308B;&#x6A5F;&#x80FD;</li>
+</ul>
+</li>
+<li>io<ul>
+<li>socket.io &#x3053;&#x3053;&#x3067;&#x306F;&#x307E;&#x3060;&#x4F7F;&#x308F;&#x306A;&#x3044;&#x304C;&#x3001;&#x7AEF;&#x672B;&#x540C;&#x58EB;&#x306E;&#x901A;&#x4FE1;&#x304C;&#x3067;&#x304D;&#x308B;</li>
+</ul>
+</li>
+<li>favicon<ul>
+<li>&#x30DA;&#x30FC;&#x30B8;&#x306E;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x6A5F;&#x80FD;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="index-html%E3%81%AE%E4%BD%9C%E6%88%90">index.html&#x306E;&#x4F5C;&#x6210;</h3>
+<ol>
+<li><p>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x76F4;&#x4E0B;&#x306B;index.html&#x3092;&#x4F5C;&#x6210;</p>
+<pre><code class="lang-html"> <span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">&quot;UTF-8&quot;</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>AngularChat<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+
+         <span class="hljs-comment">&lt;!-- css --&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;./bower_components/angular-material/angular-material.min.css&quot;</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span>&gt;</span>
+         <span class="hljs-comment">&lt;!-- css --&gt;</span>
+
+         <span class="hljs-comment">&lt;!-- server js --&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;/socket.io/socket.io.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+         <span class="hljs-comment">&lt;!-- server js --&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+
+         <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>HelloAngular<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+         <span class="hljs-comment">&lt;!-- component js --&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./bower_components/angular/angular.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./bower_components/angular-animate/angular-animate.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./bower_components/angular-aria/angular-aria.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./bower_components/angular-material/angular-material.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+         <span class="hljs-comment">&lt;!-- component js --&gt;</span>
+
+         <span class="hljs-comment">&lt;!-- user js --&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./scripts/controllers/index.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+         <span class="hljs-comment">&lt;!-- user js --&gt;</span>
+
+     <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x3092;&#x8D77;&#x52D5;&#x3057;&#x3066;&#x307F;&#x308B;</h3>
+<ol>
+<li>Terminal.app&#x3067; <code>node main.js</code> &#x3092;&#x5B9F;&#x884C;<ul>
+<li>HelloAngular&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308C;&#x3070;&#x6210;&#x529F;</li>
+</ul>
+</li>
 </ol>
 
                     
@@ -361,7 +467,7 @@
         <a href="../../../Resource/Page/Day1/Index.html" class="navigation navigation-prev " aria-label="Previous page: Day1 動かしてみよう"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../Resource/Page/Day1/SetupProject.html" class="navigation navigation-next " aria-label="Next page: プロジェクトの設定"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../Resource/Page/Day1.html" class="navigation navigation-next " aria-label="Next page: "><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
