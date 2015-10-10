@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Day1 動かしてみよう | NodeJsBootcamp</title>
+        <title>マテリアルデザインの設定 | NodeJsBootcamp</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="../../../Resource/Page/Day1/CreateProject.html" />
+    <link rel="next" href="../../../Resource/Page/Day1/SetupSocketio.html" />
     
     
-    <link rel="prev" href="../../../Resource/Page/SetupAtom.html" />
+    <link rel="prev" href="../../../Resource/Page/Day1/CreateProject.html" />
     
 
         
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="4" data-basepath="../../.." data-revision="Sat Oct 10 2015 17:00:13 GMT+0900 (JST)">
+    <div class="book" data-level="4.2" data-basepath="../../.." data-revision="Sat Oct 10 2015 17:00:13 GMT+0900 (JST)">
     
 
 <div class="book-summary">
@@ -173,7 +173,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4" data-path="Resource/Page/Day1/Index.html">
+        <li class="chapter " data-level="4" data-path="Resource/Page/Day1/Index.html">
             
                 
                     <a href="../../../Resource/Page/Day1/Index.html">
@@ -204,7 +204,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="Resource/Page/Day1/SetupMaterial.html">
+        <li class="chapter active" data-level="4.2" data-path="Resource/Page/Day1/SetupMaterial.html">
             
                 
                     <a href="../../../Resource/Page/Day1/SetupMaterial.html">
@@ -345,7 +345,94 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="day1">Day1</h1>
+                        <h1 id="%E3%83%9E%E3%83%86%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E8%A8%AD%E5%AE%9A">&#x30DE;&#x30C6;&#x30EA;&#x30A2;&#x30EB;&#x30C7;&#x30B6;&#x30A4;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;</h1>
+<ol>
+<li>scripts/controllers/index.js&#x3092;&#x4F5C;&#x6210;</li>
+<li><p>index.js&#x306B;&#x4EE5;&#x4E0B;&#x3092;&#x8A18;&#x8FF0;</p>
+<pre><code class="lang-JavaScript"> <span class="hljs-comment">// AppModule&#x3092;&#x5B9A;&#x7FA9;</span>
+ <span class="hljs-keyword">var</span> app = angular.module(<span class="hljs-string">&apos;AngularChatApp&apos;</span>, [<span class="hljs-string">&apos;ngAnimate&apos;</span>, <span class="hljs-string">&apos;ngAria&apos;</span>, <span class="hljs-string">&apos;ngMaterial&apos;</span>]);
+
+ <span class="hljs-comment">// AppModule&#x306B;Controller&#x3092;&#x5B9A;&#x7FA9;</span>
+ <span class="hljs-comment">// $scope&#x306F;View&#x3068;&#x540C;&#x671F;&#x3059;&#x308B;&#x8981;&#x7D20;&#x3001;$timeout&#x306F;View&#x3092;&#x66F4;&#x65B0;&#x3059;&#x308B;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;</span>
+ <span class="hljs-comment">// $location&#x306F;View&#x306E;&#x4F4D;&#x7F6E;&#x3001; $anchorScroll&#x306F;$location&#x3067;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x4F4D;&#x7F6E;&#x3078;&#x30B9;&#x30AF;&#x30ED;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x6A5F;&#x80FD;&#x3092;&#x6301;&#x3064;</span>
+ app.controller(<span class="hljs-string">&apos;IndexController&apos;</span>, [<span class="hljs-string">&apos;$scope&apos;</span>, <span class="hljs-string">&apos;$timeout&apos;</span>, <span class="hljs-string">&apos;$location&apos;</span>, <span class="hljs-string">&apos;$anchorScroll&apos;</span>,
+     <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$scope, $timeout, $location, $anchorScroll</span>) </span>{
+         <span class="hljs-comment">// $scope.&#x5909;&#x6570;&#x540D;&#x3068;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;View&#x3068;&#x95A2;&#x9023;&#x3065;&#x3051;&#x308B;&#x5909;&#x6570;&#x3092;&#x5B9A;&#x7FA9;&#x3067;&#x304D;&#x308B;</span>
+         $scope.users = [];
+         $scope.me = {
+             name: <span class="hljs-string">&quot;&quot;</span>,
+             message: <span class="hljs-string">&quot;&quot;</span>
+         };
+     }
+ ]);
+</code></pre>
+</li>
+<li>index.html&#x306E;&#x7DE8;&#x96C6;<ul>
+<li><code>&lt;p&gt;HelloAngular&lt;/p&gt;</code> &#x3092;&#x524A;&#x9664;</li>
+</ul>
+</li>
+<li>index.html&#x306E;&#x7DE8;&#x96C6;<pre><code class="lang-html"> <span class="hljs-comment">&lt;!-- user js --&gt;</span>
+ <span class="hljs-comment">&lt;!-- user js --&gt;</span>
+</code></pre>
+ &#x306E;&#x4F4D;&#x7F6E;&#x3092;<pre><code class="lang-html"> <span class="hljs-comment">&lt;!-- user js --&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;./scripts/controllers/index.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+ <span class="hljs-comment">&lt;!-- user js --&gt;</span>
+</code></pre>
+ &#x306B;&#x5909;&#x66F4;</li>
+<li>index.html&#x306E;&#x7DE8;&#x96C6;<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+</code></pre>
+ &#x3092;<pre><code class="lang-html"> <span class="hljs-comment">&lt;!-- layout=&quot;column&quot;&#x306F;&#x7E26;&#x4E26;&#x3073; layout=&quot;row&quot;&#x306F;&#x6A2A;&#x4E26;&#x3073;&#x3092;&#x8868;&#x3059; --&gt;</span>
+ <span class="hljs-comment">&lt;!-- ng-app &#x3053;&#x306E;&#x30BB;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x7528;&#x3044;&#x308B;AppModule&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B; --&gt;</span>
+ <span class="hljs-comment">&lt;!-- ng-controller &#x3053;&#x306E;&#x30BB;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x7528;&#x3044;&#x308B;Controller&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B; --&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">layout</span>=<span class="hljs-value">&quot;column&quot;</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">&quot;AngularChatApp&quot;</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">&quot;IndexController&quot;</span>&gt;</span>
+</code></pre>
+ &#x306B;&#x5909;&#x66F4;</li>
+<li><p>index.html&#x306E;&#x7DE8;&#x96C6;</p>
+<pre><code class="lang-html"> <span class="hljs-comment">&lt;!-- layout=&quot;column&quot;&#x306F;&#x7E26;&#x4E26;&#x3073; layout=&quot;row&quot;&#x306F;&#x6A2A;&#x4E26;&#x3073;&#x3092;&#x8868;&#x3059; --&gt;</span>
+ <span class="hljs-comment">&lt;!-- ng-app &#x3053;&#x306E;&#x30BB;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x7528;&#x3044;&#x308B;AppModule&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B; --&gt;</span>
+ <span class="hljs-comment">&lt;!-- ng-controller &#x3053;&#x306E;&#x30BB;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x7528;&#x3044;&#x308B;Controller&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B; --&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">layout</span>=<span class="hljs-value">&quot;column&quot;</span> <span class="hljs-attribute">ng-app</span>=<span class="hljs-value">&quot;AngularChatApp&quot;</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">&quot;IndexController&quot;</span>&gt;</span>
+</code></pre>
+<p> &#x306E;&#x4E0B;&#x306B;</p>
+<pre><code class="lang-html">
+     <span class="hljs-comment">&lt;!-- flex=&quot;90&quot; layout&#x306E;&#x4E2D;&#x8EAB;&#x3067;90%&#x306E;&#x5927;&#x304D;&#x3055;&#x306B;&#x3059;&#x308B; --&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">md-content</span> <span class="hljs-attribute">flex</span>=<span class="hljs-value">&quot;90&quot;</span>&gt;</span>
+         <span class="hljs-comment">&lt;!-- ng-repeat=&quot;a in b&quot; &#x3053;&#x306E;&#x30BB;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;b&#x306E;&#x8981;&#x7D20;&#x6570;&#x3060;&#x3051;&#x7E70;&#x308A;&#x8FD4;&#x3059;&#x3002;&#x305D;&#x306E;&#x9593;&#x306F;a&#x306B;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x8981;&#x7D20;&#x304C;&#x4EE3;&#x5165;&#x3055;&#x308C;&#x308B; --&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">md-card</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">&quot;user in users&quot;</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-title">md-card-content</span>&gt;</span>
+                 <span class="hljs-comment">&lt;!-- angular.js&#x306F; {{}} &#x3067;controller&#x5185;&#x306E;$scope&#x8981;&#x7D20;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B; --&gt;</span>
+                 <span class="hljs-comment">&lt;!-- &#x305D;&#x306E;&#x8981;&#x7D20;&#x306F;&#x5E38;&#x306B;View&#x3068;Model&#x304C;&#x540C;&#x671F;&#x3057;&#x3066;&#x3044;&#x308B; --&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>{{user.name}}<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{user.message}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+             <span class="hljs-tag">&lt;/<span class="hljs-title">md-card-content</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-title">md-card</span>&gt;</span>
+         <span class="hljs-comment">&lt;!-- $location&#x304C;&#x8A8D;&#x8B58;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;id&#x7528;&#x30BF;&#x30B0; --&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;chatBottom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">md-content</span>&gt;</span>
+</code></pre>
+<p> &#x3092;&#x8FFD;&#x52A0;</p>
+</li>
+<li>index.js&#x306E;&#x5909;&#x66F4;<pre><code class="lang-JavaScript"> $scope.users = [];
+ $scope.me = {
+     name: <span class="hljs-string">&quot;&quot;</span>,
+     message: <span class="hljs-string">&quot;&quot;</span>
+ };
+</code></pre>
+ &#x306E;&#x4E0B;&#x306B;<pre><code class="lang-JavaScript"> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createDummyData</span>(<span class="hljs-params"></span>) </span>{
+     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+         $timeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+             $scope.users.push({
+                 name: <span class="hljs-string">&quot;derushio&quot;</span>,
+                 message: <span class="hljs-string">&quot;&#x304A;&#x306F;&#x3088;&#x3046;&quot;</span>
+             });
+         })
+     }
+ }
+ createDummyData();
+</code></pre>
+ &#x3092;&#x8FFD;&#x52A0;</li>
+<li>node&#x3067;main.js&#x3092;&#x5B9F;&#x884C;&#x3057;&#x3066;<a href="http://localhost:3000" target="_blank">http://localhost:3000</a>&#x3092;&#x78BA;&#x8A8D;</li>
+</ol>
 
                     
                     </section>
@@ -356,10 +443,10 @@
         </div>
 
         
-        <a href="../../../Resource/Page/SetupAtom.html" class="navigation navigation-prev " aria-label="Previous page: Atom"><i class="fa fa-angle-left"></i></a>
+        <a href="../../../Resource/Page/Day1/CreateProject.html" class="navigation navigation-prev " aria-label="Previous page: プロジェクト作成"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../../Resource/Page/Day1/CreateProject.html" class="navigation navigation-next " aria-label="Next page: プロジェクト作成"><i class="fa fa-angle-right"></i></a>
+        <a href="../../../Resource/Page/Day1/SetupSocketio.html" class="navigation navigation-next " aria-label="Next page: Socket.ioの設定"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

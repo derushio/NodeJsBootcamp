@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Socket.ioの設定 | NodeJsBootcamp</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../../../Resource/Page/Day1/SetupMaterial.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="4.3" data-basepath="../../.." data-revision="Sat Oct 10 2015 17:00:13 GMT+0900 (JST)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="Resource/Page/ReferenceMaterials.html">
+            
+                
+                    <a href="../../../Resource/Page/ReferenceMaterials.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        おすすめ資料まとめ
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Resource/Page/Policy.html">
+            
+                
+                    <a href="../../../Resource/Page/Policy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        方針
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Resource/Page/DevEnv.html">
+            
+                
+                    <a href="../../../Resource/Page/DevEnv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        開発環境
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Resource/Page/SetupDevEnv.html">
+            
+                
+                    <a href="../../../Resource/Page/SetupDevEnv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        開発環境構築
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Resource/Page/SetupNodeJs.html">
+            
+                
+                    <a href="../../../Resource/Page/SetupNodeJs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Node.js
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Resource/Page/SetupAtom.html">
+            
+                
+                    <a href="../../../Resource/Page/SetupAtom.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Atom
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="Resource/Page/Day1/Index.html">
+            
+                
+                    <a href="../../../Resource/Page/Day1/Index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Day1 動かしてみよう
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="Resource/Page/Day1/CreateProject.html">
+            
+                
+                    <a href="../../../Resource/Page/Day1/CreateProject.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        プロジェクト作成
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Resource/Page/Day1/SetupMaterial.html">
+            
+                
+                    <a href="../../../Resource/Page/Day1/SetupMaterial.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        マテリアルデザインの設定
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.3" data-path="Resource/Page/Day1/SetupSocketio.html">
+            
+                
+                    <a href="../../../Resource/Page/Day1/SetupSocketio.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Socket.ioの設定
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../" >NodeJsBootcamp</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="socket-io%E3%81%AE%E8%A8%AD%E5%AE%9A">Socket.io&#x306E;&#x8A2D;&#x5B9A;</h1>
+<ol>
+<li>main.js&#x306E;&#x5909;&#x66F4;<pre><code class="lang-JavaScript"> <span class="hljs-comment">// `__dirname` &#x3092;&#x9759;&#x7684;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x3068;&#x3057;&#x3066; `/` &#x306B;&#x914D;&#x7F6E;&#x3059;&#x308B; `__dirname` &#x306F;&#x3053;&#x306E;main.js&#x306E;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;</span>
+ app.use(<span class="hljs-string">&apos;/&apos;</span>, express.static(__dirname));
+</code></pre>
+ &#x4EE5;&#x4E0B;&#x306B;<pre><code class="lang-JavaScript">     <span class="hljs-comment">// socket.io&#x306E; `connection` &#x30A4;&#x30D9;&#x30F3;&#x30C8;&#x6642;&#x306B;&#x30A4;&#x30D9;&#x30F3;&#x30C8;&#x3092;&#x767B;&#x9332;</span>
+     io.sockets.on(<span class="hljs-string">&quot;connection&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">socket</span>) </span>{
+         <span class="hljs-comment">// `sendMessage` &#x30A4;&#x30D9;&#x30F3;&#x30C8;&#x3092;&#x767B;&#x9332;</span>
+         socket.on(<span class="hljs-string">&quot;sendMessage&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+             <span class="hljs-comment">// &#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x3092;&#x81EA;&#x5206;&#x3092;&#x542B;&#x3081;&#x305F;&#x5168;&#x54E1;&#x3078;&#x8868;&#x793A;</span>
+             <span class="hljs-comment">// `sockets` &#x3092; `broadcast` &#x306B;&#x3059;&#x308C;&#x3070;&#x81EA;&#x5206;&#x4EE5;&#x5916;&#x3078;&#x9001;&#x4FE1;</span>
+             io.sockets.emit(<span class="hljs-string">&quot;sendMessage&quot;</span>, {
+                 value: data.value
+             });
+         });
+     });
+</code></pre>
+ &#x3092;&#x8FFD;&#x52A0;</li>
+<li><p>scripts/controller/index.js&#x306E;&#x5909;&#x66F4;</p>
+<pre><code class="lang-JavaScript"> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createDummyData</span>(<span class="hljs-params"></span>) </span>{
+     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+         $timeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+             $scope.users.push({
+                 name: <span class="hljs-string">&quot;derushio&quot;</span>,
+                 message: <span class="hljs-string">&quot;&#x304A;&#x306F;&#x3088;&#x3046;&quot;</span>
+             });
+         })
+     }
+ }
+ createDummyData();
+</code></pre>
+<p> &#x3092;&#x4EE5;&#x4E0B;&#x306B;&#x5DEE;&#x3057;&#x66FF;&#x3048;&#x308B;</p>
+<pre><code class="lang-JavaScript"> <span class="hljs-comment">// main.js&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x305F;socket.io&#x306E;connection&#x30A4;&#x30D9;&#x30F3;&#x30C8;&#x3092;&#x53D6;&#x5F97;</span>
+ <span class="hljs-keyword">var</span> connect = io.connect();
+
+ <span class="hljs-comment">// main.js&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x305F;socket.io&#x306E;sendMessage&#x30A4;&#x30D9;&#x30F3;&#x30C8;&#x3092;&#x53D6;&#x5F97;</span>
+ connect.on(<span class="hljs-string">&quot;sendMessage&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+     <span class="hljs-comment">// $timeout&#x753B;&#x9762;&#x3092;&#x66F4;&#x65B0;&#x3059;&#x308B;&#x969B;&#x306F;&#x3053;&#x306E;&#x65B9;&#x6CD5;&#x304C;&#x597D;&#x307E;&#x3057;&#x3044;</span>
+     $timeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+         $scope.users.push({
+             name: data.value.name,
+             message: data.value.message
+         });
+     });
+
+     <span class="hljs-comment">// &#x753B;&#x9762;&#x66F4;&#x65B0;&#x5F8C;&#x3067;&#x306A;&#x3044;&#x3068;&#x30B9;&#x30AF;&#x30ED;&#x30FC;&#x30E9;&#x30FC;&#x306E;&#x4E00;&#x756A;&#x4E0B;&#x306E;&#x30ED;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304C;&#x3068;&#x308C;&#x306A;&#x3044;</span>
+     $timeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+         $location.hash(<span class="hljs-string">&quot;chatBottom&quot;</span>);
+         $anchorScroll();
+     });
+ });
+
+ <span class="hljs-comment">// $scope.&#x5909;&#x6570;&#x540D; = function() {};&#x3067;View&#x306B;&#x95A2;&#x9023;&#x4ED8;&#x3051;&#x308B;&#x52D5;&#x4F5C;&#x3092;&#x5B9A;&#x7FA9;&#x3067;&#x304D;&#x308B;</span>
+ $scope.onKeyDown = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">$event</span>) </span>{
+     <span class="hljs-keyword">if</span> ($event.which == <span class="hljs-number">13</span>) {
+         $scope.sendMessage();
+     }
+ }
+
+ $scope.sendMessage = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+     <span class="hljs-comment">// connect&#x306B;&#x5BFE;&#x3057;&#x3066;&#x9001;&#x4FE1;</span>
+     connect.emit(<span class="hljs-string">&quot;sendMessage&quot;</span>, {
+         <span class="hljs-comment">// &#x81EA;&#x5206;&#x306E;&#x5165;&#x529B;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x9001;&#x4FE1;</span>
+         value: $scope.me
+     });
+     <span class="hljs-comment">// &#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x306F;&#x9001;&#x4FE1;&#x3055;&#x308C;&#x305F;&#x306E;&#x3067;&#x7A7A;&#x767D;&#x3078;&#x623B;&#x3059;</span>
+     $scope.me.message = <span class="hljs-string">&quot;&quot;</span>;
+ };
+</code></pre>
+</li>
+<li><p>index.html&#x306E;&#x8A2D;&#x5B9A;</p>
+<pre><code class="lang-html"> <span class="hljs-comment">&lt;!-- flex=&quot;90&quot; layout&#x306E;&#x4E2D;&#x8EAB;&#x3067;90%&#x306E;&#x5927;&#x304D;&#x3055;&#x306B;&#x3059;&#x308B; --&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">md-content</span> <span class="hljs-attribute">flex</span>=<span class="hljs-value">&quot;90&quot;</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- ng-repeat=&quot;a in b&quot; &#x3053;&#x306E;&#x30BB;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;b&#x306E;&#x8981;&#x7D20;&#x6570;&#x3060;&#x3051;&#x7E70;&#x308A;&#x8FD4;&#x3059;&#x3002;&#x305D;&#x306E;&#x9593;&#x306F;a&#x306B;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x8981;&#x7D20;&#x304C;&#x4EE3;&#x5165;&#x3055;&#x308C;&#x308B; --&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">md-card</span> <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">&quot;user in users&quot;</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">md-card-content</span>&gt;</span>
+             <span class="hljs-comment">&lt;!-- angular.js&#x306F;{{}}&#x3067;controller&#x5185;&#x306E;$scope&#x8981;&#x7D20;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B; --&gt;</span>
+             <span class="hljs-comment">&lt;!-- &#x305D;&#x306E;&#x8981;&#x7D20;&#x306F;&#x5E38;&#x306B;View&#x3068;Model&#x304C;&#x540C;&#x671F;&#x3057;&#x3066;&#x3044;&#x308B; --&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>{{user.name}}<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{user.message}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-title">md-card-content</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">md-card</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- $location&#x304C;&#x8A8D;&#x8B58;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;id&#x7528;&#x30BF;&#x30B0; --&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;chatBottom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">md-content</span>&gt;</span>
+</code></pre>
+<p> &#x4EE5;&#x4E0B;&#x306B;</p>
+<pre><code class="lang-html">
+ <span class="hljs-tag">&lt;<span class="hljs-title">md-content</span> <span class="hljs-attribute">flex</span>=<span class="hljs-value">&quot;10&quot;</span> <span class="hljs-attribute">layout</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">md-input-container</span> <span class="hljs-attribute">flex</span>=<span class="hljs-value">&quot;20&quot;</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+         <span class="hljs-comment">&lt;!-- &#x5165;&#x529B;&#x3055;&#x308C;&#x305F;&#x8981;&#x7D20;&#x306F;me.name&#x3068;&#x540C;&#x671F;&#x3059;&#x308B; --&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">&quot;me.name&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">md-input-container</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- flex&#x306F;&#x4F55;&#x3082;&#x5165;&#x529B;&#x3057;&#x306A;&#x3044;&#x3068; &#x6B8B;&#x308A;&#x306E;&#x5E45;&#x3067;&#x7B49;&#x5E45;&#x306B;&#x306A;&#x308B; --&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">md-input-container</span> <span class="hljs-attribute">flex</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">label</span>&gt;</span>Message<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+         <span class="hljs-comment">&lt;!-- enter&#x30AD;&#x30FC;&#x3092;&#x62BC;&#x3057;&#x305F;&#x6642;&#x306B;&#x9001;&#x4FE1;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;ng-keydown&#x3092;
+         IndexController&#x5185;&#x306E;onKeyDown($event);&#x3067;&#x76E3;&#x8996;&#x3057;&#x3066;&#x3044;&#x308B; --&gt;</span>
+         <span class="hljs-comment">&lt;!-- &#x5165;&#x529B;&#x3055;&#x308C;&#x305F;&#x8981;&#x7D20;&#x306F;me.name&#x3068;&#x540C;&#x671F;&#x3059;&#x308B; --&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">ng-keydown</span>=<span class="hljs-value">&quot;onKeyDown($event);&quot;</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">&quot;me.message&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">md-input-container</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">md-button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;md-raised&quot;</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">&quot;sendMessage();&quot;</span>&gt;</span>Send<span class="hljs-tag">&lt;/<span class="hljs-title">md-button</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">md-content</span>&gt;</span>
+</code></pre>
+<p> &#x3092;&#x8FFD;&#x52A0;</p>
+</li>
+<li>node&#x3067;main.js&#x3092;&#x5B9F;&#x884C;&#x3057;&#x3066;<a href="http://localhost:3000" target="_blank">http://localhost:3000</a>&#x3092;&#x78BA;&#x8A8D;</li>
+</ol>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../../Resource/Page/Day1/SetupMaterial.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: マテリアルデザインの設定"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../../../gitbook/app.js"></script>
+
+    
+    <script src="../../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

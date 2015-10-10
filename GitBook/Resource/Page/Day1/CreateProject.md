@@ -88,7 +88,6 @@
 			<!-- component js -->
 
 			<!-- user js -->
-			<script src="./scripts/controllers/index.js"></script>
 			<!-- user js -->
 
 		</body>
@@ -97,4 +96,5 @@
 
 ### サーバーを起動してみる
 0. Terminal.appで `node main.js` を実行
+0. [http://localhost:3000](http://localhost:3000)にブラウザから接続
 	* HelloAngularが表示されれば成功
